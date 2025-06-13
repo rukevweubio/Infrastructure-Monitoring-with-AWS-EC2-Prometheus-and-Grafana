@@ -71,3 +71,4 @@ user_data = <<-EOF
   sudo systemctl enable nginx
 EOF
 ```
+![terraform state file](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1130).png)
