@@ -5,8 +5,9 @@ The goal of this project is to deploy a scalable monitoring solution on AWS usin
 - Prometheus for metrics collection.
 - Node Exporter to scrape system-level metrics from the EC2 instances.
 - Grafana for visualizing the collected metrics in real-time
+![data diagram](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/terraform%20.jpg)
   
-##Problem Addressed
+## Problem Addressed
 This project addresses key challenges in cloud infrastructure management:
 Lack of Visibility: Provides real-time insights into CPU, memory, disk, and network usage.
 Manual Overhead: Automates infrastructure provisioning and software setup using Terraform.
