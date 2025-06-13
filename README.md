@@ -74,3 +74,53 @@ EOF
 ```
 
 ![APACE SERVER](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1133).png)
+## Deploy Prometheus and Node Exporter
+Configure Prometheus to collect metrics from Node Exporter on EC2 instances.
+- Install Node Exporter (via user_data script):
+```
+bash
+wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+tar xvf node_exporter-1.3.1.linux-amd64.tar.gz
+cd node_exporter-1.3.1.linux-amd64
+./node_exporter &
+Install Prometheus (on one EC2 instance):
+```
+wget https://github.com/prometheus/prometheus/releases/download/v2.35.0/prometheus-2.35.0.linux-amd64.tar.gz
+tar xvf prometheus-2.35.0.linux-amd64.tar.gz
+cd prometheus-2.35.0.linux-amd64
+```
+scrape_configs:
+``` - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['<EC2_PRIVATE_IP_1>:9100', '<EC2_PRIVATE_IP_2>:9100']
+```
+
+
+
+![PROMETHEUS SERVER](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1136).png)
+
+
+
+## Deploy Grafana for Visualization
+Objective: Install Grafana and connect it to Prometheus for metrics visualization.
+Install Grafana:
+```
+sudo apt-get install -y apt-transport-https
+sudo apt-get install -y software-properties-common wget
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+sudo apt-get update
+sudo apt-get install -y grafana
+sudo systemctl start grafana-server
+sudo systemctl enable grafana-server
+```
+## Access Grafana Dashboard:
+```
+URL: http://<GRAFANA_EC2_IP>:3000
+Default credentials: admin/admin
+Add Prometheus Data Source:
+Navigate to Configuration > Data Sources > Add Prometheus.
+Set Prometheus URL: http://<PROMETHEUS_EC2_IP>:9090.
+Import Node Exporter Dashboard:
+Use Grafana Dashboard ID: 1860 (Node Exporter Full).
+```
