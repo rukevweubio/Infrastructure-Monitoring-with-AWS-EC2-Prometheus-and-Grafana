@@ -99,6 +99,8 @@ scrape_configs:
 
 ![PROMETHEUS SERVER](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1136).png)
 
+![PROMETHEUS EXPORTER](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1149).png)
+
 
 
 ## Deploy Grafana for Visualization
@@ -126,3 +128,5 @@ Use Grafana Dashboard ID: 1860 (Node Exporter Full).
 
 ```
 ![GRAFANA SERVER](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1137).png)
+
+![GRAFANA SERVER](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1151).png)
