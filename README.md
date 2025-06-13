@@ -123,4 +123,6 @@ Navigate to Configuration > Data Sources > Add Prometheus.
 Set Prometheus URL: http://<PROMETHEUS_EC2_IP>:9090.
 Import Node Exporter Dashboard:
 Use Grafana Dashboard ID: 1860 (Node Exporter Full).
+
 ```
+![GRAFANA SERVER](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1137).png)
