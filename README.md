@@ -23,6 +23,7 @@ Terraform was used to:
 - Bootstrap Software Installation: Utilized user_data scripts to automatically install and configure NGINX, Node Exporter, Prometheus, and Grafana.
 - Ensure Consistency: Guaranteed identical configurations across both EC2 instances.
 - Key Benefit: Enabled infrastructure to be treated as code—version-controlled, reusable, and scalable.
+![terraform state file](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1130).png)
 
 ## Implementation Steps
 Terraform Setup for AWS EC2 Instances
@@ -71,4 +72,5 @@ user_data = <<-EOF
   sudo systemctl enable nginx
 EOF
 ```
-![terraform state file](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1130).png)
+
+![APACE SERVER](https://github.com/rukevweubio/Infrastructure-Monitoring-with-AWS-EC2-Prometheus-and-Grafana/blob/main/picture/Screenshot%20(1133).png)
